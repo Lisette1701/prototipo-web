@@ -65,12 +65,26 @@ body { /* Selección de body */
     }
     
     .destinos-container{
+        display: flex; /* Utiliza flexbox para alinear elementos */
+        justify-content: space-between; /* Distribuye uniformemenente los elementos */
+        flex-wrap: wrap; /* Si los elementos no caben en la misma línea, agrega una nueva linea con estos elementos extras */
     }
     .destino{
         width: calc(33.33% - 20px); /* Establece el ancho de cada destino menos el espacio entre los destinos */
-        
+        margin-bottom: 20px; /* Define el margen inferior*/
+        text-align: center; /* Centra el texto */
     }
     
+    .destino img{
+        width: 100%; /* Establece el ancho de la imagen ajustandola al elemento que la contiene */
+        border-radius: 8px; /* Agrega esquinas redondeadas */
+    }
+    .destino h3{
+        margin-top: 10px; /* Agrega distancia entre imagen y h3 */
+    }
+    .destino p{
+        margin-top: 10px; /* Agrega distancia superior entre h3 y p */
+    }
     
     footer{
         background-color: #333; /* Establece color fondo de footer */
@@ -78,4 +92,37 @@ body { /* Selección de body */
         text-align: center; /* Centra el texto */
         padding: 20px 0; /* Añade relleno superior e inferior */
     }
-    
+    /*Aqui va el estilo del formulario de contacto*/
+    #contacto{
+        padding: 40PX 0; /*añade relleno superior e inferior*/
+    }
+    #contacto .container{
+        text-align: center;
+    }
+    #contacto h2{
+        margin-bottom: 20px;
+    }
+    #contacto form{
+        width: 500px; /*establece el ancho máximo del elemento*/
+        margin: 0 auto; /*Centra horizontalmente dentro del contendor */
+        padding: 20px;
+        background-color: rgb(132, 92, 181);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1); /*establece una forma alrededor del formulario*/
+    }
+    #contacto label{
+        display: block; /*etiquetas en bloques*/
+        margin-bottom: 10px;
+        font-weight: bold; /* establece fuente en negrita*/
+    }
+    #contacto input, #contacto textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        box-sizing: border-box; /*incluye el padding y el borde del ancho dentro del elemento que lo contiene*/
+    }
+    #contacto textarea{
+        resize: vertical; /*permite redimensionar el texto*/
+    }
